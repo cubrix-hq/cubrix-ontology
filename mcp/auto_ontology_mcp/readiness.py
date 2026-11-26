@@ -1,6 +1,7 @@
 # SPDX-FileCopyrightText: Copyright (c) 2026, NVIDIA CORPORATION & AFFILIATES.
 # All rights reserved.
 # SPDX-License-Identifier: Apache-2.0
+# Modified by Cubrix (ThirtyThree Industries LLC), 2026: Cubrix branding. See NOTICE-CUBRIX.md.
 
 """``check_readiness`` — whether this deployment can answer questions yet.
 
@@ -124,7 +125,7 @@ async def _probe(client: httpx.AsyncClient, path: str) -> Any:
 
     if response.status_code == 401:
         raise ToolError(
-            "Auto Ontology rejected the credentials while checking readiness. Sign in "
+            "Cubrix Ontology rejected the credentials while checking readiness. Sign in "
             "again. (HTTP 401)"
         )
     if response.status_code == 403:
@@ -163,7 +164,7 @@ def _summarise(status: Any, connections: Any, databases: Any) -> Readiness:
     elif status is None:
         blockers.append(
             "Could not read whether the semantic layer is compiled "
-            f"({STATUS_PATH} was unreadable). Auto Ontology may be starting up or "
+            f"({STATUS_PATH} was unreadable). Cubrix Ontology may be starting up or "
             "partially deployed."
         )
         built = False
@@ -172,7 +173,7 @@ def _summarise(status: Any, connections: Any, databases: Any) -> Readiness:
         if not built:
             blockers.append(
                 "The semantic layer has not been compiled, so there is no "
-                "glossary to resolve a question against. Compile it in the Auto Ontology "
+                "glossary to resolve a question against. Compile it in the Cubrix Ontology "
                 "UI; nothing can be asked of the data until it finishes."
             )
 
@@ -197,7 +198,7 @@ def _summarise(status: Any, connections: Any, databases: Any) -> Readiness:
                 "No database connection is configured, so generated SQL cannot "
                 "execute. Questions will still be accepted and will still cost "
                 "a full agent run before failing with an empty answer. Add a "
-                "connection in the Auto Ontology UI."
+                "connection in the Cubrix Ontology UI."
             )
 
     if databases is FORBIDDEN:
@@ -228,7 +229,7 @@ def _summarise(status: Any, connections: Any, databases: Any) -> Readiness:
                 "question to reach. A connection can exist before its catalog "
                 "does: ingestion runs after the connection is saved, and an "
                 "unfinished or failed ingest leaves the catalog empty. Check "
-                "the ingestion service, or re-save the connection in the Auto Ontology UI."
+                "the ingestion service, or re-save the connection in the Cubrix Ontology UI."
             )
 
     return Readiness(
@@ -248,7 +249,7 @@ def register(mcp: FastMCP, settings: Settings, client: httpx.AsyncClient) -> Non
     @mcp.tool(
         name="check_readiness",
         description=(
-            "Report whether this Auto Ontology deployment can answer questions at all: "
+            "Report whether this Cubrix Ontology deployment can answer questions at all: "
             "whether a catalog has been ingested, whether a live database "
             "connection exists to run SQL against, and whether the semantic "
             "layer has been compiled. All three are required.\n\n"

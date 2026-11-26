@@ -1,6 +1,7 @@
 // SPDX-FileCopyrightText: Copyright (c) 2024-2026, NVIDIA CORPORATION & AFFILIATES.
 // All rights reserved.
 // SPDX-License-Identifier: Apache-2.0
+// Modified by Cubrix (ThirtyThree Industries LLC), 2026: Cubrix branding. See NOTICE-CUBRIX.md.
 
 'use client';
 
@@ -14,8 +15,8 @@ export const SemanticNotReady = () => (
 	<EmptyState
 		variant={EmptyStateVariant.Welcome}
 		illustration={
-			<div className="flex h-12 w-12 items-center justify-center rounded-xl bg-[#76b900]/15">
-				<Icon name={IconName.NvidiaLogo} className="h-6 w-6 text-[#76b900]" />
+			<div className="flex h-12 w-12 items-center justify-center rounded-xl bg-(--color-brand)/15">
+				<Icon name={IconName.CubrixLogo} className="h-6 w-6 text-(--color-brand)" />
 			</div>
 		}
 		title="Semantic Layer Not Ready"

@@ -1,6 +1,7 @@
 // SPDX-FileCopyrightText: Copyright (c) 2024-2026, NVIDIA CORPORATION & AFFILIATES.
 // All rights reserved.
 // SPDX-License-Identifier: Apache-2.0
+// Modified by Cubrix (ThirtyThree Industries LLC), 2026: Cubrix branding. See NOTICE-CUBRIX.md.
 
 'use client';
 
@@ -67,7 +68,7 @@ export const ConnectionConnectStep = ({
 					}: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) =>
 						onFieldChange(field.key, target.value);
 					const inputClassName =
-						'rounded-lg border border-zinc-300 bg-white px-3 py-2 font-mono text-sm text-heading outline-none focus:border-[#76b900] focus:ring-2 focus:ring-[#76b900]/30 dark:border-zinc-600 dark:bg-zinc-900 dark:text-zinc-100';
+						'rounded-lg border border-zinc-300 bg-white px-3 py-2 font-mono text-sm text-heading outline-none focus:border-(--color-brand) focus:ring-2 focus:ring-(--color-brand)/30 dark:border-zinc-600 dark:bg-zinc-900 dark:text-zinc-100';
 
 					// Boolean fields render as a checkbox; the modal stores every
 					// value as a string, so 'true'/'' is the on/off representation.
@@ -82,7 +83,7 @@ export const ConnectionConnectStep = ({
 											onFieldChange(field.key, target.checked ? 'true' : '')
 										}
 										data-testid={`connection-field-${field.key}`}
-										className="h-4 w-4 rounded border-zinc-300 accent-[#76b900] dark:border-zinc-600"
+										className="h-4 w-4 rounded border-zinc-300 accent-(--color-brand) dark:border-zinc-600"
 									/>
 									{field.label}
 								</span>
@@ -208,7 +209,7 @@ export const ConnectionConnectStep = ({
 					</Button>
 				)}
 				{testSuccessMessage != null && (
-					<p className="text-sm text-[#5e9400] dark:text-[#8fd100]">
+					<p className="text-sm text-(--color-brand-hover) dark:text-[#8fd100]">
 						{testSuccessMessage}
 					</p>
 				)}

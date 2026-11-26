@@ -1,6 +1,7 @@
 // SPDX-FileCopyrightText: Copyright (c) 2026, NVIDIA CORPORATION & AFFILIATES.
 // All rights reserved.
 // SPDX-License-Identifier: Apache-2.0
+// Modified by Cubrix (ThirtyThree Industries LLC), 2026: Cubrix branding. See NOTICE-CUBRIX.md.
 
 'use client';
 
@@ -34,7 +35,7 @@ const GROUP_COLORS: readonly ColorOption[] = [
 const DEFAULT_GROUP_COLOR = GROUP_COLORS[0].value;
 
 const inputClassName =
-	'w-full rounded-lg border border-zinc-300 bg-white px-3 py-2 text-sm text-heading outline-none focus:border-[#76b900] focus:ring-1 focus:ring-[#76b900] dark:border-zinc-700 dark:bg-zinc-900 dark:text-zinc-100';
+	'w-full rounded-lg border border-zinc-300 bg-white px-3 py-2 text-sm text-heading outline-none focus:border-(--color-brand) focus:ring-1 focus:ring-(--color-brand) dark:border-zinc-700 dark:bg-zinc-900 dark:text-zinc-100';
 
 const labelClassName = 'mb-1.5 block text-sm font-semibold text-heading dark:text-zinc-100';
 

@@ -1,6 +1,7 @@
 // SPDX-FileCopyrightText: Copyright (c) 2024-2026, NVIDIA CORPORATION & AFFILIATES.
 // All rights reserved.
 // SPDX-License-Identifier: Apache-2.0
+// Modified by Cubrix (ThirtyThree Industries LLC), 2026: Cubrix branding. See NOTICE-CUBRIX.md.
 
 import type { HTMLAttributes, KeyboardEvent, ReactNode } from 'react';
 
@@ -25,7 +26,7 @@ export const OptionCard = ({ children, onKeyDown, ...props }: OptionCardProps) =
 			}
 			onKeyDown?.(event);
 		}}
-		className="flex h-[150px] cursor-pointer flex-col items-center justify-center gap-2 rounded-lg border border-zinc-200 bg-white px-4 py-6 shadow-sm transition-colors hover:border-[#76b900]/50 hover:bg-[#76b900]/5 dark:border-zinc-700 dark:bg-zinc-900 dark:hover:border-[#76b900]/40"
+		className="flex h-[150px] cursor-pointer flex-col items-center justify-center gap-2 rounded-lg border border-zinc-200 bg-white px-4 py-6 shadow-sm transition-colors hover:border-(--color-brand)/50 hover:bg-(--color-brand)/5 dark:border-zinc-700 dark:bg-zinc-900 dark:hover:border-(--color-brand)/40"
 	>
 		{children}
 	</div>

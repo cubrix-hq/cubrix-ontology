@@ -1,6 +1,7 @@
 // SPDX-FileCopyrightText: Copyright (c) 2024-2026, NVIDIA CORPORATION & AFFILIATES.
 // All rights reserved.
 // SPDX-License-Identifier: Apache-2.0
+// Modified by Cubrix (ThirtyThree Industries LLC), 2026: Cubrix branding. See NOTICE-CUBRIX.md.
 
 'use client';
 
@@ -23,8 +24,8 @@ type GlobalSearchTabsProps = {
 
 const tabClass = (selected: boolean) =>
 	selected
-		? 'inline-flex shrink-0 cursor-pointer items-center gap-1.5 rounded-lg bg-[#76b900] px-2.5 py-1.5 text-white'
-		: 'inline-flex shrink-0 cursor-pointer items-center gap-1.5 rounded-lg bg-white px-2.5 py-1.5 text-body shadow-sm ring-1 ring-zinc-200 hover:bg-[#76b900]/10 hover:text-[#4d7a00] dark:bg-zinc-800 dark:text-zinc-200 dark:ring-zinc-700 dark:hover:bg-[#76b900]/15';
+		? 'inline-flex shrink-0 cursor-pointer items-center gap-1.5 rounded-lg bg-(--color-brand) px-2.5 py-1.5 text-(--color-on-brand)'
+		: 'inline-flex shrink-0 cursor-pointer items-center gap-1.5 rounded-lg bg-white px-2.5 py-1.5 text-body shadow-sm ring-1 ring-zinc-200 hover:bg-(--color-brand)/10 hover:text-(--color-brand-strong) dark:bg-zinc-800 dark:text-zinc-200 dark:ring-zinc-700 dark:hover:bg-(--color-brand)/15';
 
 export const totalGlobalSearchCount = (counts: Record<string, number>): number =>
 	Object.values(counts).reduce((sum, value) => sum + value, 0);

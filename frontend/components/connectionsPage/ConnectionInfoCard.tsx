@@ -1,6 +1,7 @@
 // SPDX-FileCopyrightText: Copyright (c) 2024-2026, NVIDIA CORPORATION & AFFILIATES.
 // All rights reserved.
 // SPDX-License-Identifier: Apache-2.0
+// Modified by Cubrix (ThirtyThree Industries LLC), 2026: Cubrix branding. See NOTICE-CUBRIX.md.
 
 'use client';
 
@@ -110,7 +111,7 @@ export const ConnectionInfoCard = ({
 								onSsoFederationChange(connection.database_name, target.checked)
 							}
 							data-testid={`sso-federation-${connection.database_name}`}
-							className="mt-0.5 h-4 w-4 shrink-0 cursor-pointer rounded border-zinc-300 accent-[#76b900] disabled:cursor-default dark:border-zinc-600"
+							className="mt-0.5 h-4 w-4 shrink-0 cursor-pointer rounded border-zinc-300 accent-(--color-brand) disabled:cursor-default dark:border-zinc-600"
 						/>
 						<span className="min-w-0">
 							<span className="block text-xs font-medium text-heading dark:text-zinc-200">

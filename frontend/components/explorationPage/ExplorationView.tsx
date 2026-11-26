@@ -1,6 +1,7 @@
 // SPDX-FileCopyrightText: Copyright (c) 2024-2026, NVIDIA CORPORATION & AFFILIATES.
 // All rights reserved.
 // SPDX-License-Identifier: Apache-2.0
+// Modified by Cubrix (ThirtyThree Industries LLC), 2026: Cubrix branding. See NOTICE-CUBRIX.md.
 
 'use client';
 
@@ -2176,7 +2177,7 @@ export const ExplorationView = () => {
 												}
 												className={`h-4 w-4 shrink-0 ${
 													node.layer === ExplorationLayer.Semantic
-														? 'text-[#76b900]'
+														? 'text-(--color-brand)'
 														: 'text-[#3b82b6]'
 												}`}
 											/>

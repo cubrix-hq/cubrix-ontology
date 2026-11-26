@@ -1,6 +1,7 @@
 // SPDX-FileCopyrightText: Copyright (c) 2024-2026, NVIDIA CORPORATION & AFFILIATES.
 // All rights reserved.
 // SPDX-License-Identifier: Apache-2.0
+// Modified by Cubrix (ThirtyThree Industries LLC), 2026: Cubrix branding. See NOTICE-CUBRIX.md.
 
 'use client';
 
@@ -20,7 +21,7 @@ type FormattedContentProps = {
 const renderCodeFallback = (text: string, key: number) => (
 	<pre
 		key={key}
-		className="my-2 overflow-x-auto rounded-lg bg-zinc-900 p-3 text-xs leading-relaxed text-[#76b900] dark:bg-zinc-950"
+		className="my-2 overflow-x-auto rounded-lg bg-zinc-900 p-3 text-xs leading-relaxed text-(--color-brand) dark:bg-zinc-950"
 	>
 		<code>{text}</code>
 	</pre>
@@ -45,7 +46,7 @@ const renderSegment = (segment: ContentSegment, key: number) => {
 					href={segment.url}
 					target="_blank"
 					rel="noopener noreferrer"
-					className="text-[#76b900] underline hover:text-[#6aa500]"
+					className="text-(--color-brand) underline hover:text-[#6aa500]"
 				>
 					{segment.text}
 				</a>
@@ -58,7 +59,7 @@ const renderSegment = (segment: ContentSegment, key: number) => {
 					href={segment.url}
 					target="_blank"
 					rel="noopener noreferrer"
-					className="font-semibold text-[#76b900] underline hover:text-[#6aa500]"
+					className="font-semibold text-(--color-brand) underline hover:text-[#6aa500]"
 				>
 					{segment.text}
 				</a>
@@ -71,7 +72,7 @@ const renderSegment = (segment: ContentSegment, key: number) => {
 					<ChartBlock
 						raw={segment.text}
 						fallback={
-							<pre className="my-2 overflow-x-auto rounded-lg bg-zinc-900 p-3 text-xs leading-relaxed text-[#76b900] dark:bg-zinc-950">
+							<pre className="my-2 overflow-x-auto rounded-lg bg-zinc-900 p-3 text-xs leading-relaxed text-(--color-brand) dark:bg-zinc-950">
 								<code>{segment.text}</code>
 							</pre>
 						}

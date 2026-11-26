@@ -3,6 +3,7 @@
  * All rights reserved.
  * SPDX-License-Identifier: Apache-2.0
  */
+/* Modified by Cubrix (ThirtyThree Industries LLC), 2026: Cubrix branding. See NOTICE-CUBRIX.md. */
 
 /* Load Tailwind. @nvidia/foundations-react-core ships no standalone base.css. */
 @import 'tailwindcss';
@@ -79,7 +80,7 @@
 /*
  * Pagination (@nvidia/foundations-react-core Pagination, kind="tabs").
  * The package ships no base styles and renders its chevrons as an icon font
- * that isn't loaded here, so the green design language — including the arrow
+ * that isn't loaded here, so the brand design language — including the arrow
  * glyphs — lives in this stylesheet.
  */
 .nv-pagination-root {
@@ -166,8 +167,8 @@
 }
 
 .nv-pagination-page-list .nv-tabs-trigger[data-state='active'] {
-	background-color: rgba(118, 185, 0, 0.15);
-	color: #76b900; /* NVIDIA green */
+	background-color: color-mix(in srgb, var(--color-brand) 15%, transparent);
+	color: var(--color-brand);
 }
 
 .nv-pagination-item-range-text {
@@ -218,7 +219,6 @@ body {
 
 /* ── ResultChart (agent-authored ```chart fences) ─────────────────────── */
 :root {
-	--color-brand: #76b900;
 	--result-chart-neutral: #8c8c95;
 	--result-chart-fg: var(--color-heading);
 	--result-chart-muted: var(--color-secondary);
@@ -455,4 +455,49 @@ body {
 	text-align: center;
 	font-size: 0.75rem;
 	color: var(--result-chart-muted);
+}
+
+/* ── Cubrix brand (https://cubrix.ai) ─────────────────────────────────── */
+/* Light mode uses a deeper green so text and icons stay legible on white;  */
+/* dark mode uses Cubrix's own accent. --color-on-brand is text on a solid  */
+/* brand background.                                                        */
+:root {
+	--color-brand: #0a8f62;
+	--color-brand-hover: #087a53;
+	--color-brand-strong: #066142;
+	--color-brand-light: #3ddc97;
+	--color-brand-soft: #b5f1d6;
+	--color-brand-2: #5b8cff;
+	--color-on-brand: #ffffff;
+}
+
+@media (prefers-color-scheme: dark) {
+	:root {
+		--color-brand: #3ddc97;
+		--color-brand-hover: #2bc283;
+		--color-brand-strong: #1fa971;
+		--color-brand-light: #6fe6b1;
+		--color-brand-soft: #c9f5e2;
+		--color-on-brand: #06231a;
+	}
+}
+
+body {
+	font-family:
+		var(--font-inter),
+		system-ui,
+		-apple-system,
+		sans-serif;
+}
+
+h1,
+h2,
+h3 {
+	font-family: var(--font-space-grotesk), var(--font-inter), sans-serif;
+}
+
+code,
+pre,
+kbd {
+	font-family: var(--font-jetbrains-mono), ui-monospace, monospace;
 }

@@ -1,6 +1,7 @@
 // SPDX-FileCopyrightText: Copyright (c) 2024-2026, NVIDIA CORPORATION & AFFILIATES.
 // All rights reserved.
 // SPDX-License-Identifier: Apache-2.0
+// Modified by Cubrix (ThirtyThree Industries LLC), 2026: Cubrix branding. See NOTICE-CUBRIX.md.
 
 'use client';
 
@@ -116,7 +117,7 @@ const HighlightedText = ({ text, query }: { text: string; query: string }) => {
 				needle.has(part.toLowerCase()) ? (
 					<mark
 						key={`${part}-${index}`}
-						className="rounded-sm bg-[#76b900]/25 text-inherit"
+						className="rounded-sm bg-(--color-brand)/25 text-inherit"
 					>
 						{part}
 					</mark>
@@ -144,7 +145,10 @@ const HighlightedWholeWords = ({ text, query }: { text: string; query: string })
 			nodes.push(text.slice(cursor, wordStart));
 		}
 		nodes.push(
-			<mark key={`${word}-${wordStart}`} className="rounded-sm bg-[#76b900]/25 text-inherit">
+			<mark
+				key={`${word}-${wordStart}`}
+				className="rounded-sm bg-(--color-brand)/25 text-inherit"
+			>
 				{word}
 			</mark>,
 		);
@@ -230,7 +234,7 @@ export const GlobalSearchResults = ({
 					<Link
 						href={href}
 						onClick={onNavigate}
-						className="flex min-w-0 cursor-pointer flex-col gap-1.5 overflow-hidden rounded-xl border border-zinc-200 bg-white px-3 py-2.5 select-none [&_*]:cursor-pointer transition-colors hover:border-[#76b900]/50 hover:bg-[#76b900]/5 dark:border-zinc-700 dark:bg-zinc-900 dark:hover:border-[#76b900]/40 dark:hover:bg-[#76b900]/10"
+						className="flex min-w-0 cursor-pointer flex-col gap-1.5 overflow-hidden rounded-xl border border-zinc-200 bg-white px-3 py-2.5 select-none [&_*]:cursor-pointer transition-colors hover:border-(--color-brand)/50 hover:bg-(--color-brand)/5 dark:border-zinc-700 dark:bg-zinc-900 dark:hover:border-(--color-brand)/40 dark:hover:bg-(--color-brand)/10"
 					>
 						<div className="flex min-w-0 items-center gap-2 overflow-hidden">
 							<Icon name={typeIcon} className="h-4 w-4 shrink-0 text-secondary" />

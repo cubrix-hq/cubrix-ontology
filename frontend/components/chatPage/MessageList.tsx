@@ -1,6 +1,7 @@
 // SPDX-FileCopyrightText: Copyright (c) 2024-2026, NVIDIA CORPORATION & AFFILIATES.
 // All rights reserved.
 // SPDX-License-Identifier: Apache-2.0
+// Modified by Cubrix (ThirtyThree Industries LLC), 2026: Cubrix branding. See NOTICE-CUBRIX.md.
 
 'use client';
 
@@ -59,8 +60,8 @@ export const MessageList = ({
 			<EmptyState
 				variant={EmptyStateVariant.Welcome}
 				illustration={
-					<div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-[#76b900]/15">
-						<Icon name={IconName.ChatBubble} className="h-7 w-7 text-[#76b900]" />
+					<div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-(--color-brand)/15">
+						<Icon name={IconName.ChatBubble} className="h-7 w-7 text-(--color-brand)" />
 					</div>
 				}
 				title="Ask a Question"

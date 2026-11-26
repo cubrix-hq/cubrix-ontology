@@ -1,10 +1,11 @@
 // SPDX-FileCopyrightText: Copyright (c) 2024-2026, NVIDIA CORPORATION & AFFILIATES.
 // All rights reserved.
 // SPDX-License-Identifier: Apache-2.0
+// Modified by Cubrix (ThirtyThree Industries LLC), 2026: Cubrix branding. See NOTICE-CUBRIX.md.
 
 import type { Metadata } from 'next';
 import { headers } from 'next/headers';
-import { Geist, Geist_Mono } from 'next/font/google';
+import { Inter, JetBrains_Mono, Space_Grotesk } from 'next/font/google';
 import { TooltipProvider } from '@nvidia/foundations-react-core';
 import {
 	HydrationBoundary,
@@ -32,22 +33,29 @@ const isLoginOrOauthPath = (pathname: string): boolean =>
 	pathname === '/oauth' ||
 	pathname.startsWith('/oauth/');
 
-const geistSans = Geist({
-	variable: '--font-geist-sans',
+// Cubrix brand fonts (as on cubrix.ai): Inter for text, Space Grotesk for headings.
+const inter = Inter({
+	variable: '--font-inter',
 	subsets: ['latin'],
 });
 
-const geistMono = Geist_Mono({
-	variable: '--font-geist-mono',
+const spaceGrotesk = Space_Grotesk({
+	variable: '--font-space-grotesk',
+	subsets: ['latin'],
+});
+
+const jetbrainsMono = JetBrains_Mono({
+	variable: '--font-jetbrains-mono',
 	subsets: ['latin'],
 });
 
 export const metadata: Metadata = {
 	title: {
-		default: 'Auto Ontology — NVIDIA',
-		template: 'Auto Ontology - %s',
+		default: 'Cubrix Ontology — Cubrix',
+		template: 'Cubrix Ontology - %s',
 	},
-	description: 'NVIDIA Auto Ontology',
+	description:
+		'Cubrix Ontology: ask your business data questions in plain English. Based on NVIDIA Auto Ontology.',
 	icons: {
 		icon: '/favicon.svg',
 	},
@@ -103,7 +111,7 @@ export default async function RootLayout({
 	return (
 		<html
 			lang="en"
-			className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+			className={`${inter.variable} ${spaceGrotesk.variable} ${jetbrainsMono.variable} h-full antialiased`}
 		>
 			<body className="flex h-full flex-col bg-white text-heading dark:bg-zinc-950 dark:text-zinc-100">
 				<QueryProvider>

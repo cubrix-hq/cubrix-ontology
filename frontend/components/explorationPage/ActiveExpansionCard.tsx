@@ -1,6 +1,7 @@
 // SPDX-FileCopyrightText: Copyright (c) 2024-2026, NVIDIA CORPORATION & AFFILIATES.
 // All rights reserved.
 // SPDX-License-Identifier: Apache-2.0
+// Modified by Cubrix (ThirtyThree Industries LLC), 2026: Cubrix branding. See NOTICE-CUBRIX.md.
 
 'use client';
 
@@ -46,13 +47,13 @@ const TYPE_LABEL: Record<ExpansionEntityKind, string> = {
 const TYPE_ICON_COLOR: Record<ExpansionEntityKind, string> = {
 	schema: 'text-[#8b7fd6]',
 	column: 'text-[#8a94a6]',
-	term: 'text-[#76b900]',
+	term: 'text-(--color-brand)',
 	table: 'text-[#3b82b6]',
 	columnAttribute: 'text-[#c99a2e]',
 	sqlAttribute: 'text-[#c2577a]',
 	sql: 'text-[#4f83cc]',
 	customAnalysis: 'text-[#d17a3f]',
-	connection: 'text-[#76b900]',
+	connection: 'text-(--color-brand)',
 };
 
 // The graph id `ExplorationView.tsx` gives most expansion node kinds is
@@ -102,7 +103,7 @@ const PATH_NODE_ICON: Record<string, IconName> = {
 };
 
 const PATH_NODE_ICON_COLOR: Record<string, string> = {
-	term: 'text-[#76b900]',
+	term: 'text-(--color-brand)',
 	table: 'text-[#3b82b6]',
 	column: 'text-[#8a94a6]',
 	columnAttribute: 'text-[#c99a2e]',

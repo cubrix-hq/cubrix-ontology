@@ -1,6 +1,7 @@
 // SPDX-FileCopyrightText: Copyright (c) 2024-2026, NVIDIA CORPORATION & AFFILIATES.
 // All rights reserved.
 // SPDX-License-Identifier: Apache-2.0
+// Modified by Cubrix (ThirtyThree Industries LLC), 2026: Cubrix branding. See NOTICE-CUBRIX.md.
 
 'use client';
 
@@ -122,7 +123,7 @@ export const MessageBubble = ({ message }: MessageBubbleProps) => {
 			<div
 				className={`max-w-[80%] rounded-2xl px-4 py-3 ${wideAssistant ? 'w-full' : ''} ${
 					isUser
-						? 'bg-[#76b900] text-white'
+						? 'bg-(--color-brand) text-(--color-on-brand)'
 						: 'bg-zinc-100 text-heading dark:bg-zinc-800 dark:text-zinc-100'
 				}`}
 			>

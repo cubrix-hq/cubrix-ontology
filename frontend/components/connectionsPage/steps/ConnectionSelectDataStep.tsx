@@ -1,6 +1,7 @@
 // SPDX-FileCopyrightText: Copyright (c) 2024-2026, NVIDIA CORPORATION & AFFILIATES.
 // All rights reserved.
 // SPDX-License-Identifier: Apache-2.0
+// Modified by Cubrix (ThirtyThree Industries LLC), 2026: Cubrix branding. See NOTICE-CUBRIX.md.
 
 'use client';
 
@@ -56,7 +57,7 @@ export const ConnectionSelectDataStep = ({
 								type="checkbox"
 								checked={selectedDatabases.includes(name)}
 								onChange={toggle(name)}
-								className="h-4 w-4 rounded border-zinc-300 text-[#76b900] focus:ring-[#76b900]/30"
+								className="h-4 w-4 rounded border-zinc-300 text-(--color-brand) focus:ring-(--color-brand)/30"
 							/>
 							<span className="text-sm text-heading dark:text-zinc-200">{name}</span>
 						</label>

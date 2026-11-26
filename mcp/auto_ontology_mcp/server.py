@@ -1,8 +1,9 @@
 # SPDX-FileCopyrightText: Copyright (c) 2026, NVIDIA CORPORATION & AFFILIATES.
 # All rights reserved.
 # SPDX-License-Identifier: Apache-2.0
+# Modified by Cubrix (ThirtyThree Industries LLC), 2026: Cubrix branding. See NOTICE-CUBRIX.md.
 
-"""Assemble the Auto Ontology MCP server from the published OpenAPI spec."""
+"""Assemble the Cubrix Ontology MCP server from the published OpenAPI spec."""
 
 from __future__ import annotations
 
@@ -157,7 +158,7 @@ class CallerAuth(httpx.Auth):
         if not token:
             raise ToolError(
                 "This request carried no signed-in session. Sign in again "
-                "through the Auto Ontology deployment this server is pointed at."
+                "through the Cubrix Ontology deployment this server is pointed at."
             )
 
         # A request must never carry two identities, whichever slot the
@@ -170,7 +171,7 @@ class CallerAuth(httpx.Auth):
 
 
 def build_client(settings: Settings) -> httpx.AsyncClient:
-    """HTTP client for the public Auto Ontology API.
+    """HTTP client for the public Cubrix Ontology API.
 
     The credential is not set here: :class:`CallerAuth` resolves one per
     request, so a single client can serve callers with different identities.
@@ -213,8 +214,8 @@ def build_server(settings: Settings) -> tuple[FastMCP, httpx.AsyncClient]:
     readiness.register(mcp, settings, client)
 
     logger.info(
-        "Auto Ontology MCP server built against %s (spec: %s). Callers sign in against "
-        "that Auto Ontology deployment; this server holds no credentials.",
+        "Cubrix Ontology MCP server built against %s (spec: %s). Callers sign in against "
+        "that Cubrix Ontology deployment; this server holds no credentials.",
         settings.api_url,
         settings.spec_path,
     )

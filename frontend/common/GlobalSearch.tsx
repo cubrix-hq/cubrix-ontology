@@ -1,6 +1,7 @@
 // SPDX-FileCopyrightText: Copyright (c) 2024-2026, NVIDIA CORPORATION & AFFILIATES.
 // All rights reserved.
 // SPDX-License-Identifier: Apache-2.0
+// Modified by Cubrix (ThirtyThree Industries LLC), 2026: Cubrix branding. See NOTICE-CUBRIX.md.
 
 'use client';
 
@@ -318,7 +319,7 @@ export const GlobalSearchModal = ({ open, onClose }: GlobalSearchModalProps) => 
 						value={query}
 						onChange={handleQueryChange}
 						placeholder="Search…"
-						aria-label="Search Auto Ontology"
+						aria-label="Search Cubrix Ontology"
 						autoFocus
 						className="h-9 w-full"
 					/>
@@ -370,7 +371,7 @@ export const GlobalSearch = () => {
 			<button
 				type="button"
 				onClick={() => setOpen(true)}
-				aria-label="Search Auto Ontology"
+				aria-label="Search Cubrix Ontology"
 				className="inline-flex h-8 cursor-pointer items-center gap-2 rounded-full bg-blue-50 px-3 text-sm text-blue-700 transition-colors hover:bg-blue-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-400/40 dark:bg-blue-950/40 dark:text-blue-300 dark:hover:bg-blue-900/50"
 			>
 				<svg
@@ -385,7 +386,7 @@ export const GlobalSearch = () => {
 						clipRule="evenodd"
 					/>
 				</svg>
-				Search Auto Ontology
+				Search Cubrix Ontology
 			</button>
 			<GlobalSearchModal open={open} onClose={() => setOpen(false)} />
 		</>

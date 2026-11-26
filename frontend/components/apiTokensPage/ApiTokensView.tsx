@@ -1,6 +1,7 @@
 // SPDX-FileCopyrightText: Copyright (c) 2024-2026, NVIDIA CORPORATION & AFFILIATES.
 // All rights reserved.
 // SPDX-License-Identifier: Apache-2.0
+// Modified by Cubrix (ThirtyThree Industries LLC), 2026: Cubrix branding. See NOTICE-CUBRIX.md.
 
 'use client';
 
@@ -28,7 +29,7 @@ const EXPIRY_OPTIONS: { label: string; days?: number }[] = [
 ];
 
 const inputClassName =
-	'w-full rounded-lg border border-zinc-300 bg-white px-3 py-2 text-sm text-heading outline-none focus:border-[#76b900] focus:ring-1 focus:ring-[#76b900] dark:border-zinc-700 dark:bg-zinc-900 dark:text-zinc-100';
+	'w-full rounded-lg border border-zinc-300 bg-white px-3 py-2 text-sm text-heading outline-none focus:border-(--color-brand) focus:ring-1 focus:ring-(--color-brand) dark:border-zinc-700 dark:bg-zinc-900 dark:text-zinc-100';
 
 const isExpired = (token: ApiToken): boolean =>
 	token.expires_at != null && new Date(token.expires_at).getTime() <= Date.now();
@@ -205,8 +206,8 @@ export const ApiTokensView = () => {
 							API Tokens
 						</h1>
 						<p className="mt-1 text-xs text-secondary dark:text-zinc-400">
-							Call the Auto Ontology API from scripts without signing in. A token acts
-							as you — it can do exactly what your account can, and nothing more.
+							Call the Cubrix Ontology API from scripts without signing in. A token
+							acts as you — it can do exactly what your account can, and nothing more.
 						</p>
 					</div>
 					<Button theme={ButtonTheme.Primary} size={Size.SMALL} onClick={openCreate}>
@@ -216,14 +217,14 @@ export const ApiTokensView = () => {
 				</div>
 
 				{freshToken ? (
-					<div className="rounded-lg border border-[#76b900]/40 bg-[#76b900]/5 p-4">
+					<div className="rounded-lg border border-(--color-brand)/40 bg-(--color-brand)/5 p-4">
 						<div className="flex items-start justify-between gap-3">
 							<div className="min-w-0">
 								<h2 className="text-sm font-semibold text-heading dark:text-zinc-100">
 									Copy your token now
 								</h2>
 								<p className="mt-1 text-xs text-body dark:text-zinc-400">
-									Auto Ontology stores only a hash of it, so this is the one and
+									Cubrix Ontology stores only a hash of it, so this is the one and
 									only time it can be shown. Send it as the <code>x-api-key</code>{' '}
 									header.
 								</p>
@@ -253,7 +254,7 @@ export const ApiTokensView = () => {
 					<EmptyState
 						icon={IconName.Key}
 						title="No API Tokens Yet"
-						description="Create one to authenticate scripts and scheduled jobs against the Auto Ontology API."
+						description="Create one to authenticate scripts and scheduled jobs against the Cubrix Ontology API."
 						variant={EmptyStateVariant.Dashed}
 					/>
 				) : null}

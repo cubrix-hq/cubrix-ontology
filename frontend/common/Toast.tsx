@@ -1,6 +1,7 @@
 // SPDX-FileCopyrightText: Copyright (c) 2024-2026, NVIDIA CORPORATION & AFFILIATES.
 // All rights reserved.
 // SPDX-License-Identifier: Apache-2.0
+// Modified by Cubrix (ThirtyThree Industries LLC), 2026: Cubrix branding. See NOTICE-CUBRIX.md.
 
 'use client';
 
@@ -28,7 +29,7 @@ const iconColorClass: Record<ToastVariant, string> = {
 	[ToastVariant.Error]: 'text-red-600 dark:text-red-400',
 	[ToastVariant.Success]: 'text-emerald-600 dark:text-emerald-400',
 	[ToastVariant.Info]: 'text-sky-600 dark:text-sky-400',
-	[ToastVariant.Loading]: 'text-[#76b900]',
+	[ToastVariant.Loading]: 'text-(--color-brand)',
 };
 
 const VariantIcon = ({ variant }: { variant: ToastVariant }) => {
