@@ -1,6 +1,7 @@
 // SPDX-FileCopyrightText: Copyright (c) 2024-2026, NVIDIA CORPORATION & AFFILIATES.
 // All rights reserved.
 // SPDX-License-Identifier: Apache-2.0
+// Modified by Cubrix (ThirtyThree Industries LLC), 2026: Cubrix branding. See NOTICE-CUBRIX.md.
 
 'use client';
 
@@ -195,7 +196,7 @@ const ObjectsFilter = ({
 									type="checkbox"
 									checked={checked}
 									onChange={() => toggleType(type)}
-									className="h-4 w-4 shrink-0 accent-[#76b900]"
+									className="h-4 w-4 shrink-0 accent-(--color-brand)"
 								/>
 								<Icon
 									name={SEARCH_TYPE_ICON[type]}
@@ -223,7 +224,7 @@ const TagOption = ({ label, checked, onToggle }: TagOptionProps) => (
 			type="checkbox"
 			checked={checked}
 			onChange={onToggle}
-			className="h-4 w-4 shrink-0 accent-[#76b900]"
+			className="h-4 w-4 shrink-0 accent-(--color-brand)"
 		/>
 		<span className="truncate">{label}</span>
 	</label>

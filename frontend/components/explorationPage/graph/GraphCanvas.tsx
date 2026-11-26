@@ -1,6 +1,7 @@
 // SPDX-FileCopyrightText: Copyright (c) 2024-2026, NVIDIA CORPORATION & AFFILIATES.
 // All rights reserved.
 // SPDX-License-Identifier: Apache-2.0
+// Modified by Cubrix (ThirtyThree Industries LLC), 2026: Cubrix branding. See NOTICE-CUBRIX.md.
 
 'use client';
 
@@ -147,7 +148,8 @@ const HOVER_LABEL_BACKGROUND_DARK = '#18181b';
 const prefersDarkMode = () =>
 	typeof window !== 'undefined' && window.matchMedia('(prefers-color-scheme: dark)').matches;
 
-const EDGE_BRAND_COLOR = '#76b900';
+// Cubrix accent (cubrix.ai). Sigma draws on a canvas, so this is a hex value rather than a CSS variable.
+const EDGE_BRAND_COLOR = '#3ddc97';
 
 const hexToRgb = (hex: string) => {
 	const value = hex.replace('#', '');

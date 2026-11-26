@@ -1,6 +1,7 @@
 // SPDX-FileCopyrightText: Copyright (c) 2024-2026, NVIDIA CORPORATION & AFFILIATES.
 // All rights reserved.
 // SPDX-License-Identifier: Apache-2.0
+// Modified by Cubrix (ThirtyThree Industries LLC), 2026: Cubrix branding. See NOTICE-CUBRIX.md.
 
 import { Size } from '@/enums/button';
 import { ProgressBarKind } from '@/enums/progressBar';
@@ -63,11 +64,11 @@ export const ProgressBar = ({
 			>
 				{isIndeterminate ? (
 					<div
-						className={`${trackSizeClasses[size]} w-1/3 rounded-full bg-[#76b900] motion-safe:animate-progress-indeterminate`}
+						className={`${trackSizeClasses[size]} w-1/3 rounded-full bg-(--color-brand) motion-safe:animate-progress-indeterminate`}
 					/>
 				) : (
 					<div
-						className={`${trackSizeClasses[size]} rounded-full bg-[#76b900] transition-[width] duration-300 ease-out`}
+						className={`${trackSizeClasses[size]} rounded-full bg-(--color-brand) transition-[width] duration-300 ease-out`}
 						style={{ width: `${displayPercent}%` }}
 					/>
 				)}

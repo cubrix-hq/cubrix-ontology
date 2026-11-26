@@ -1,6 +1,7 @@
 // SPDX-FileCopyrightText: Copyright (c) 2024-2026, NVIDIA CORPORATION & AFFILIATES.
 // All rights reserved.
 // SPDX-License-Identifier: Apache-2.0
+// Modified by Cubrix (ThirtyThree Industries LLC), 2026: Cubrix branding. See NOTICE-CUBRIX.md.
 
 'use client';
 
@@ -85,7 +86,7 @@ function ConversationItem({
 								setEditing(false);
 							}
 						}}
-						className="min-w-0 flex-1 rounded border border-zinc-300 bg-white px-2 py-1 text-sm text-black outline-none focus:border-[#76b900] dark:border-zinc-600 dark:bg-zinc-800 dark:text-zinc-100 dark:focus:border-[#76b900]"
+						className="min-w-0 flex-1 rounded border border-zinc-300 bg-white px-2 py-1 text-sm text-black outline-none focus:border-(--color-brand) dark:border-zinc-600 dark:bg-zinc-800 dark:text-zinc-100 dark:focus:border-(--color-brand)"
 					/>
 				</form>
 			</li>
@@ -208,9 +209,12 @@ export const ChatSidebar = ({
 			>
 				<div className="flex h-[65px] w-full shrink-0 items-center border-b border-zinc-200 px-4 dark:border-zinc-800">
 					<Link href="/" className="flex items-center gap-3">
-						<Icon name={IconName.NvidiaLogo} className="h-6 w-auto text-[#76b900]" />
+						<Icon
+							name={IconName.CubrixLogo}
+							className="h-6 w-auto text-(--color-brand)"
+						/>
 						<span className="text-sm font-semibold tracking-wide text-black dark:text-zinc-100">
-							Auto Ontology
+							Cubrix Ontology
 						</span>
 					</Link>
 				</div>
@@ -224,7 +228,7 @@ export const ChatSidebar = ({
 						iconPosition="left"
 						full
 					>
-						<span className="text-lg leading-none text-[#76b900]">+</span>
+						<span className="text-lg leading-none text-(--color-brand)">+</span>
 						New Chat
 					</Button>
 				</div>

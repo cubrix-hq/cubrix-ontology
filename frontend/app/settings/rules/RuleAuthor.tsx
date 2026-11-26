@@ -1,6 +1,7 @@
 // SPDX-FileCopyrightText: Copyright (c) 2024-2026, NVIDIA CORPORATION & AFFILIATES.
 // All rights reserved.
 // SPDX-License-Identifier: Apache-2.0
+// Modified by Cubrix (ThirtyThree Industries LLC), 2026: Cubrix branding. See NOTICE-CUBRIX.md.
 
 'use client';
 
@@ -29,7 +30,7 @@ export const RuleAuthor = ({ author }: { author?: TagAuthor | null }) => {
 		<span className="flex min-w-0 items-center gap-2">
 			<span
 				aria-hidden="true"
-				className={`flex h-5 w-5 shrink-0 items-center justify-center rounded-full text-[10px] font-semibold ${name === '' ? 'bg-zinc-200 text-secondary dark:bg-zinc-700 dark:text-zinc-400' : 'bg-[#76b900] text-white'}`}
+				className={`flex h-5 w-5 shrink-0 items-center justify-center rounded-full text-[10px] font-semibold ${name === '' ? 'bg-zinc-200 text-secondary dark:bg-zinc-700 dark:text-zinc-400' : 'bg-(--color-brand) text-(--color-on-brand)'}`}
 			>
 				{label.charAt(0).toUpperCase()}
 			</span>

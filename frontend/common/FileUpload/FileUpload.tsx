@@ -1,6 +1,7 @@
 // SPDX-FileCopyrightText: Copyright (c) 2024-2026, NVIDIA CORPORATION & AFFILIATES.
 // All rights reserved.
 // SPDX-License-Identifier: Apache-2.0
+// Modified by Cubrix (ThirtyThree Industries LLC), 2026: Cubrix branding. See NOTICE-CUBRIX.md.
 
 'use client';
 
@@ -100,12 +101,12 @@ export const FileUpload = ({
 			onDrop={handleDrop}
 			aria-disabled={disabled || undefined}
 			aria-label={ariaLabel}
-			className={`flex flex-col items-center justify-center gap-2 rounded-lg border-2 border-dashed px-4 py-8 text-center transition-colors focus-visible:ring-2 focus-visible:ring-[#76b900]/40 focus-visible:outline-none ${
+			className={`flex flex-col items-center justify-center gap-2 rounded-lg border-2 border-dashed px-4 py-8 text-center transition-colors focus-visible:ring-2 focus-visible:ring-(--color-brand)/40 focus-visible:outline-none ${
 				disabled
 					? 'cursor-default border-zinc-200 opacity-60 dark:border-zinc-800'
 					: `cursor-pointer ${
 							isDragOver
-								? 'border-[#76b900] bg-[#76b900]/5'
+								? 'border-(--color-brand) bg-(--color-brand)/5'
 								: 'border-zinc-300 hover:border-zinc-400 dark:border-zinc-600 dark:hover:border-zinc-500'
 						}`
 			} ${className}`}
@@ -134,7 +135,7 @@ export const FileUpload = ({
 			) : (
 				<>
 					<p className="text-sm text-body dark:text-zinc-300">
-						<span className="font-medium text-[#5e9400] dark:text-[#a3d63a]">
+						<span className="font-medium text-(--color-brand-hover) dark:text-(--color-brand-light)">
 							{label}
 						</span>{' '}
 						or drag and drop

@@ -1,6 +1,7 @@
 // SPDX-FileCopyrightText: Copyright (c) 2024-2026, NVIDIA CORPORATION & AFFILIATES.
 // All rights reserved.
 // SPDX-License-Identifier: Apache-2.0
+// Modified by Cubrix (ThirtyThree Industries LLC), 2026: Cubrix branding. See NOTICE-CUBRIX.md.
 
 import type { FC, SVGProps } from 'react';
 
@@ -14,7 +15,7 @@ import CheckSvg from './svg/check.svg';
 import CopySvg from './svg/copy.svg';
 import ChatBubbleSvg from './svg/chat-bubble.svg';
 import ChevronRightSvg from './svg/chevron-right.svg';
-import NvidiaLogoSvg from './svg/nvidia-logo.svg';
+import CubrixLogoSvg from './svg/cubrix-logo.svg';
 import DatabaseSvg from './svg/database.svg';
 import SettingsSvg from './svg/settings.svg';
 import ChartBarSvg from './svg/chart-bar.svg';
@@ -56,7 +57,7 @@ export enum IconName {
 	Copy = 'copy',
 	ChatBubble = 'chat-bubble',
 	ChevronRight = 'chevron-right',
-	NvidiaLogo = 'nvidia-logo',
+	CubrixLogo = 'cubrix-logo',
 	Database = 'database',
 	Settings = 'settings',
 	ChartBar = 'chart-bar',
@@ -97,7 +98,7 @@ const icons: Record<IconName, FC<SVGProps<SVGSVGElement>>> = {
 	[IconName.Copy]: CopySvg,
 	[IconName.ChatBubble]: ChatBubbleSvg,
 	[IconName.ChevronRight]: ChevronRightSvg,
-	[IconName.NvidiaLogo]: NvidiaLogoSvg,
+	[IconName.CubrixLogo]: CubrixLogoSvg,
 	[IconName.Database]: DatabaseSvg,
 	[IconName.Settings]: SettingsSvg,
 	[IconName.ChartBar]: ChartBarSvg,

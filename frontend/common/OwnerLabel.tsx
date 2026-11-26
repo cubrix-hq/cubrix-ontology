@@ -1,6 +1,7 @@
 // SPDX-FileCopyrightText: Copyright (c) 2026, NVIDIA CORPORATION & AFFILIATES.
 // All rights reserved.
 // SPDX-License-Identifier: Apache-2.0
+// Modified by Cubrix (ThirtyThree Industries LLC), 2026: Cubrix branding. See NOTICE-CUBRIX.md.
 
 import { Icon, IconName } from '@/common/icons';
 import { groupColorClass } from '@/lib/owners';
@@ -35,7 +36,7 @@ export const OwnerLabel = ({ owner }: { owner?: OwnerLabelOwner | null }) => {
 					<Icon name={IconName.Users} className="h-3.5 w-3.5" />
 				</span>
 			) : (
-				<span className="inline-flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-[#76b900] text-[10px] font-semibold text-white">
+				<span className="inline-flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-(--color-brand) text-[10px] font-semibold text-(--color-on-brand)">
 					{initials(owner.name)}
 				</span>
 			)}

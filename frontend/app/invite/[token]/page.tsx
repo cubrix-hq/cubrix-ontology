@@ -1,6 +1,7 @@
 // SPDX-FileCopyrightText: Copyright (c) 2024-2026, NVIDIA CORPORATION & AFFILIATES.
 // All rights reserved.
 // SPDX-License-Identifier: Apache-2.0
+// Modified by Cubrix (ThirtyThree Industries LLC), 2026: Cubrix branding. See NOTICE-CUBRIX.md.
 
 import { Icon, IconName } from '@/common/icons';
 import { getOpenInvitation } from '@/lib/invitations';
@@ -10,9 +11,9 @@ const InviteInvalid = () => (
 	<div className="flex h-full w-full items-center justify-center bg-white p-6 dark:bg-zinc-950">
 		<div className="flex max-w-sm flex-col items-center gap-4 text-center">
 			<div className="flex items-center gap-2">
-				<Icon name={IconName.NvidiaLogo} className="h-6 w-6" />
+				<Icon name={IconName.CubrixLogo} className="h-6 w-6" />
 				<span className="text-lg font-semibold text-heading dark:text-zinc-100">
-					Auto Ontology
+					Cubrix Ontology
 				</span>
 			</div>
 			<p className="text-sm text-body dark:text-zinc-300">

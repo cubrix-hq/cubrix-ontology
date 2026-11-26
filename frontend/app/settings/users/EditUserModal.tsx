@@ -1,6 +1,7 @@
 // SPDX-FileCopyrightText: Copyright (c) 2024-2026, NVIDIA CORPORATION & AFFILIATES.
 // All rights reserved.
 // SPDX-License-Identifier: Apache-2.0
+// Modified by Cubrix (ThirtyThree Industries LLC), 2026: Cubrix branding. See NOTICE-CUBRIX.md.
 
 'use client';
 
@@ -12,7 +13,7 @@ import { Size, ButtonTheme } from '@/enums/button';
 import type { UpdateUserInput, User } from '@/types/auth';
 
 const inputClass =
-	'w-full rounded-lg border border-zinc-300 bg-white px-3 py-2 text-sm text-heading outline-none focus:border-[#76b900] focus:ring-1 focus:ring-[#76b900] disabled:cursor-not-allowed disabled:bg-zinc-100 disabled:text-secondary dark:border-zinc-700 dark:bg-zinc-900 dark:text-zinc-100 dark:disabled:bg-zinc-800';
+	'w-full rounded-lg border border-zinc-300 bg-white px-3 py-2 text-sm text-heading outline-none focus:border-(--color-brand) focus:ring-1 focus:ring-(--color-brand) disabled:cursor-not-allowed disabled:bg-zinc-100 disabled:text-secondary dark:border-zinc-700 dark:bg-zinc-900 dark:text-zinc-100 dark:disabled:bg-zinc-800';
 
 type EditUserModalProps = {
 	user: User;

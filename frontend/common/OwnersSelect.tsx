@@ -1,6 +1,7 @@
 // SPDX-FileCopyrightText: Copyright (c) 2026, NVIDIA CORPORATION & AFFILIATES.
 // All rights reserved.
 // SPDX-License-Identifier: Apache-2.0
+// Modified by Cubrix (ThirtyThree Industries LLC), 2026: Cubrix branding. See NOTICE-CUBRIX.md.
 
 import type { OwnerKind } from '@/types/owners';
 
@@ -12,7 +13,7 @@ export type OwnerOption = {
 };
 
 const FIELD_CLASS =
-	'w-full rounded-lg border border-zinc-300 bg-white px-3 py-2 text-sm text-body outline-none transition-colors focus:border-[#76b900] focus:ring-2 focus:ring-[#76b900]/30 dark:border-zinc-600 dark:bg-zinc-900 dark:text-zinc-300';
+	'w-full rounded-lg border border-zinc-300 bg-white px-3 py-2 text-sm text-body outline-none transition-colors focus:border-(--color-brand) focus:ring-2 focus:ring-(--color-brand)/30 dark:border-zinc-600 dark:bg-zinc-900 dark:text-zinc-300';
 
 /**
  * One owner, or nobody. Users and groups are separate groups in the list,

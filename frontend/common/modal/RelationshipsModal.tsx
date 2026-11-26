@@ -1,6 +1,7 @@
 // SPDX-FileCopyrightText: Copyright (c) 2024-2026, NVIDIA CORPORATION & AFFILIATES.
 // All rights reserved.
 // SPDX-License-Identifier: Apache-2.0
+// Modified by Cubrix (ThirtyThree Industries LLC), 2026: Cubrix branding. See NOTICE-CUBRIX.md.
 
 'use client';
 
@@ -144,7 +145,7 @@ export const RelationshipsModal = ({
 				return (
 					<NextLink
 						href={href}
-						className="flex h-6 w-6 items-center justify-center rounded text-secondary transition-colors hover:bg-zinc-100 hover:text-[#76b900] dark:hover:bg-zinc-700"
+						className="flex h-6 w-6 items-center justify-center rounded text-secondary transition-colors hover:bg-zinc-100 hover:text-(--color-brand) dark:hover:bg-zinc-700"
 						aria-label={`Open ${row.name}`}
 						title={`Open ${row.name}`}
 					>

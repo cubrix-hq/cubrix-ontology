@@ -1,6 +1,7 @@
 // SPDX-FileCopyrightText: Copyright (c) 2024-2026, NVIDIA CORPORATION & AFFILIATES.
 // All rights reserved.
 // SPDX-License-Identifier: Apache-2.0
+// Modified by Cubrix (ThirtyThree Industries LLC), 2026: Cubrix branding. See NOTICE-CUBRIX.md.
 
 import { Icon, IconName } from '@/common/icons';
 import { CertificationStatus } from '@/enums/certification';
@@ -14,7 +15,7 @@ export const CERTIFICATION_LABEL: Record<CertificationStatus, string> = {
 
 const PILL_CLASS: Record<CertificationStatus, string> = {
 	[CertificationStatus.Certified]:
-		'border-[#76b900]/40 bg-[#76b900]/10 text-[#4d7a00] dark:border-[#76b900]/30 dark:bg-[#76b900]/15 dark:text-[#a3d63a]',
+		'border-(--color-brand)/40 bg-(--color-brand)/10 text-(--color-brand-strong) dark:border-(--color-brand)/30 dark:bg-(--color-brand)/15 dark:text-(--color-brand-light)',
 	[CertificationStatus.Partial]:
 		'border-amber-300/60 bg-amber-100 text-amber-700 dark:border-amber-500/30 dark:bg-amber-500/15 dark:text-amber-300',
 	[CertificationStatus.Pending]:
@@ -22,7 +23,7 @@ const PILL_CLASS: Record<CertificationStatus, string> = {
 };
 
 const ICON_CLASS: Record<CertificationStatus, string> = {
-	[CertificationStatus.Certified]: 'text-[#76b900]',
+	[CertificationStatus.Certified]: 'text-(--color-brand)',
 	[CertificationStatus.Partial]: 'text-amber-500',
 	[CertificationStatus.Pending]: 'text-secondary dark:text-zinc-500',
 };
@@ -74,7 +75,7 @@ export const CertificationBadge = ({
 				// mouse, which on its own the badge answers by taking focus to
 				// reveal its tooltip.
 				tabIndex={focusable ? 0 : undefined}
-				className={`group relative inline-flex shrink-0 rounded outline-none focus-visible:ring-2 focus-visible:ring-[#76b900]/50 ${className}`}
+				className={`group relative inline-flex shrink-0 rounded outline-none focus-visible:ring-2 focus-visible:ring-(--color-brand)/50 ${className}`}
 			>
 				<Icon
 					name={IconName.Certification}

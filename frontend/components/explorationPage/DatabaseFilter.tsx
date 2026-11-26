@@ -1,6 +1,7 @@
 // SPDX-FileCopyrightText: Copyright (c) 2024-2026, NVIDIA CORPORATION & AFFILIATES.
 // All rights reserved.
 // SPDX-License-Identifier: Apache-2.0
+// Modified by Cubrix (ThirtyThree Industries LLC), 2026: Cubrix branding. See NOTICE-CUBRIX.md.
 
 'use client';
 
@@ -135,7 +136,7 @@ export const DatabaseFilter = ({ selected, onChange }: DatabaseFilterProps) => {
 										onChange(null);
 										close();
 									}}
-									className="h-4 w-4 cursor-pointer border-zinc-300 text-[#76b900] focus:ring-[#76b900]/40 dark:border-zinc-600"
+									className="h-4 w-4 cursor-pointer border-zinc-300 text-(--color-brand) focus:ring-(--color-brand)/40 dark:border-zinc-600"
 								/>
 								<span className="inline-flex shrink-0" aria-hidden>
 									<Icon

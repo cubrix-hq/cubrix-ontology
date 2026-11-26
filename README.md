@@ -2,9 +2,18 @@
 SPDX-FileCopyrightText: Copyright (c) 2026, NVIDIA CORPORATION & AFFILIATES.
 All rights reserved.
 SPDX-License-Identifier: Apache-2.0
+Modified by Cubrix (ThirtyThree Industries LLC), 2026: Cubrix introduction above the upstream text.
 -->
 
-# Auto Ontology
+# Cubrix Ontology
+
+> **Cubrix Ontology is Cubrix's build of [NVIDIA Auto Ontology](https://github.com/NVIDIA/auto-ontology)**,
+> used under the Apache License 2.0. It is not made, endorsed or supported by NVIDIA. What we changed is
+> listed in [NOTICE-CUBRIX.md](./NOTICE-CUBRIX.md), and how we take in NVIDIA's updates is in
+> [UPSTREAM.md](./UPSTREAM.md). The rest of this README is NVIDIA's, describing the upstream project;
+> code names such as `auto_ontology` and the `AUTO_ONTOLOGY_*` settings are unchanged on purpose.
+
+## NVIDIA Auto Ontology (upstream README)
 
 [![#1 on the BEAVER leaderboard](https://img.shields.io/badge/BEAVER_leaderboard-%231-76b900)](https://beaverbench.github.io/#leaderboard)
 [![#1 on the BIRD-Interact leaderboard](https://img.shields.io/badge/BIRD--Interact_leaderboard-%231-76b900)](https://bird-interact.github.io/)

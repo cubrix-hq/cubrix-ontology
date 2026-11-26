@@ -1,6 +1,7 @@
 // SPDX-FileCopyrightText: Copyright (c) 2024-2026, NVIDIA CORPORATION & AFFILIATES.
 // All rights reserved.
 // SPDX-License-Identifier: Apache-2.0
+// Modified by Cubrix (ThirtyThree Industries LLC), 2026: Cubrix branding. See NOTICE-CUBRIX.md.
 
 import type { CSSProperties } from 'react';
 
@@ -12,9 +13,9 @@ import { Text } from '@/common/Text';
 const LABEL_BASE =
 	'inline-flex min-w-0 max-w-[min(24rem,100%)] items-center overflow-hidden rounded-full border px-3 py-1 text-xs font-medium';
 const LABEL_GREEN =
-	'border-[#76b900]/40 bg-[#76b900]/10 text-[#4d7a00] dark:border-[#76b900]/30 dark:bg-[#76b900]/15 dark:text-[#a3d63a]';
+	'border-(--color-brand)/40 bg-(--color-brand)/10 text-(--color-brand-strong) dark:border-(--color-brand)/30 dark:bg-(--color-brand)/15 dark:text-(--color-brand-light)';
 const LABEL_GREEN_HOVER =
-	'hover:border-[#76b900]/70 hover:bg-[#76b900]/20 hover:text-[#3d6200] dark:hover:border-[#76b900]/60 dark:hover:bg-[#76b900]/25 dark:hover:text-[#b6e05a]';
+	'hover:border-(--color-brand)/70 hover:bg-(--color-brand)/20 hover:text-[#3d6200] dark:hover:border-(--color-brand)/60 dark:hover:bg-(--color-brand)/25 dark:hover:text-[#b6e05a]';
 const LABEL_NEUTRAL =
 	'border-zinc-200 bg-zinc-100 text-body dark:border-zinc-700 dark:bg-zinc-800 dark:text-zinc-300';
 const LABEL_MUTED =

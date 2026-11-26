@@ -1,6 +1,7 @@
 // SPDX-FileCopyrightText: Copyright (c) 2024-2026, NVIDIA CORPORATION & AFFILIATES.
 // All rights reserved.
 // SPDX-License-Identifier: Apache-2.0
+// Modified by Cubrix (ThirtyThree Industries LLC), 2026: Cubrix branding. See NOTICE-CUBRIX.md.
 
 'use client';
 
@@ -108,7 +109,9 @@ export default function AgentSettingsPage() {
 								void handleToggle();
 							}}
 							className={`relative inline-flex h-6 w-11 shrink-0 cursor-pointer items-center rounded-full transition-colors disabled:cursor-not-allowed disabled:opacity-50 ${
-								visualization ? 'bg-[#76b900]' : 'bg-zinc-300 dark:bg-zinc-600'
+								visualization
+									? 'bg-(--color-brand)'
+									: 'bg-zinc-300 dark:bg-zinc-600'
 							}`}
 						>
 							<span
@@ -154,7 +157,7 @@ export default function AgentSettingsPage() {
 								disabled={savingTimeout}
 								aria-invalid={!draftValid}
 								onChange={(e) => setTimeoutDraft(e.target.value)}
-								className="h-9 w-24 rounded-md border border-zinc-300 bg-white px-3 text-sm text-body outline-none transition-colors focus:border-[#76b900] focus:ring-2 focus:ring-[#76b900]/30 disabled:cursor-not-allowed disabled:bg-zinc-100 disabled:text-disabled aria-[invalid=true]:border-red-500 dark:border-zinc-600 dark:bg-zinc-900 dark:text-zinc-300 dark:disabled:bg-zinc-800/50 dark:disabled:text-zinc-400"
+								className="h-9 w-24 rounded-md border border-zinc-300 bg-white px-3 text-sm text-body outline-none transition-colors focus:border-(--color-brand) focus:ring-2 focus:ring-(--color-brand)/30 disabled:cursor-not-allowed disabled:bg-zinc-100 disabled:text-disabled aria-[invalid=true]:border-red-500 dark:border-zinc-600 dark:bg-zinc-900 dark:text-zinc-300 dark:disabled:bg-zinc-800/50 dark:disabled:text-zinc-400"
 							/>
 							<Button
 								theme={ButtonTheme.Primary}

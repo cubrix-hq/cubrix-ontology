@@ -1,6 +1,7 @@
 # SPDX-FileCopyrightText: Copyright (c) 2026, NVIDIA CORPORATION & AFFILIATES.
 # All rights reserved.
 # SPDX-License-Identifier: Apache-2.0
+# Modified by Cubrix (ThirtyThree Industries LLC), 2026: Cubrix branding. See NOTICE-CUBRIX.md.
 
 """``ask_question`` — the text-to-SQL agent as a single MCP tool.
 
@@ -135,15 +136,15 @@ async def _raise_for_status(response: httpx.Response) -> None:
 
     if response.status_code in (401, 403):
         raise ToolError(
-            "Auto Ontology rejected the credentials for this question. Sign in again, "
+            "Cubrix Ontology rejected the credentials for this question. Sign in again, "
             "and check that the account is allowed to use chat. "
             f"({detail})"
         )
     if response.status_code == 409:
         # Either the semantic layer was never built, or this conversation
         # already has a turn in flight. The backend's detail distinguishes them.
-        raise ToolError(f"Auto Ontology cannot answer right now: {detail}")
-    raise ToolError(f"Auto Ontology returned HTTP {response.status_code}: {detail}")
+        raise ToolError(f"Cubrix Ontology cannot answer right now: {detail}")
+    raise ToolError(f"Cubrix Ontology returned HTTP {response.status_code}: {detail}")
 
 
 def register(mcp: FastMCP, settings: Settings, client: httpx.AsyncClient) -> None:
@@ -153,10 +154,10 @@ def register(mcp: FastMCP, settings: Settings, client: httpx.AsyncClient) -> Non
         name="ask_question",
         description=(
             "Ask a natural-language question about the data connected to this "
-            "Auto Ontology deployment. Auto Ontology resolves the question against its semantic "
+            "Cubrix Ontology deployment. Cubrix Ontology resolves the question against its semantic "
             "layer, writes SQL, runs it, and returns the answer together with "
             "the SQL it used.\n\n"
-            "This is the primary tool and the reason Auto Ontology exists. It is also "
+            "This is the primary tool and the reason Cubrix Ontology exists. It is also "
             "slow — many sequential model calls, typically tens of seconds — "
             "so use check_answerable first when you are unsure the question is "
             "in scope, and prefer one well-formed question over several "
@@ -224,23 +225,23 @@ def register(mcp: FastMCP, settings: Settings, client: httpx.AsyncClient) -> Non
                         answer = _build_answer(event.get("answer") or {})
                     elif kind == "error":
                         raise ToolError(
-                            f"Auto Ontology agent failed: {event.get('message') or 'unknown'}"
+                            f"Cubrix Ontology agent failed: {event.get('message') or 'unknown'}"
                         )
         except httpx.TimeoutException as exc:
             raise ToolError(
-                f"Auto Ontology did not answer within {settings.chat_timeout_s:.0f}s. "
+                f"Cubrix Ontology did not answer within {settings.chat_timeout_s:.0f}s. "
                 "Raise AUTO_ONTOLOGY_MCP_CHAT_TIMEOUT_S, or ask a narrower question."
             ) from exc
         except httpx.HTTPError as exc:
             raise ToolError(
-                f"Could not reach Auto Ontology at {settings.api_url}: {exc}"
+                f"Could not reach Cubrix Ontology at {settings.api_url}: {exc}"
             ) from exc
 
         if answer is None:
             # The stream ended with no result and no error. This is what a
             # cancelled run looks like from the outside.
             raise ToolError(
-                "Auto Ontology ended the run without producing an answer. It may have "
+                "Cubrix Ontology ended the run without producing an answer. It may have "
                 "been cancelled, or the question may not map to the data."
             )
         return answer

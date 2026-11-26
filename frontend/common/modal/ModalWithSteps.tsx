@@ -1,6 +1,7 @@
 // SPDX-FileCopyrightText: Copyright (c) 2024-2026, NVIDIA CORPORATION & AFFILIATES.
 // All rights reserved.
 // SPDX-License-Identifier: Apache-2.0
+// Modified by Cubrix (ThirtyThree Industries LLC), 2026: Cubrix branding. See NOTICE-CUBRIX.md.
 
 'use client';
 
@@ -44,7 +45,7 @@ const stepStatusClass: Record<StepStatus, string> = {
 	[StepStatus.DISABLED]: 'pointer-events-none text-secondary dark:text-zinc-600',
 	[StepStatus.ACTIVE]: 'pointer-events-none font-medium text-heading dark:text-zinc-100',
 	[StepStatus.COMPLETED]:
-		'cursor-pointer text-body hover:rounded-lg hover:bg-zinc-100 hover:text-[#76b900] dark:text-zinc-400 dark:hover:bg-zinc-800 dark:hover:text-[#8fd100]',
+		'cursor-pointer text-body hover:rounded-lg hover:bg-zinc-100 hover:text-(--color-brand) dark:text-zinc-400 dark:hover:bg-zinc-800 dark:hover:text-[#8fd100]',
 	[StepStatus.INACTIVE]: 'pointer-events-none text-secondary dark:text-zinc-500',
 };
 

@@ -1,8 +1,9 @@
 # SPDX-FileCopyrightText: Copyright (c) 2026, NVIDIA CORPORATION & AFFILIATES.
 # All rights reserved.
 # SPDX-License-Identifier: Apache-2.0
+# Modified by Cubrix (ThirtyThree Industries LLC), 2026: Cubrix branding. See NOTICE-CUBRIX.md.
 
-"""Sign-in, where Auto Ontology itself is the authorization server.
+"""Sign-in, where Cubrix Ontology itself is the authorization server.
 
 This server could instead sit between the client and the deployment's identity
 provider. That works, but it has to be told a client id, a client secret, and a
@@ -49,7 +50,7 @@ SCOPE_CLAIM = "urn:auto-ontology:oauth:scope"
 
 
 class AutoOntologyTokenVerifier(TokenVerifier):
-    """Validates a token by asking Auto Ontology whether it still stands.
+    """Validates a token by asking Cubrix Ontology whether it still stands.
 
     A rejected token returns ``None`` so the caller is told to sign in again.
     A Auto Ontology that cannot be reached raises instead: an outage is not an expired
@@ -94,7 +95,7 @@ class AutoOntologyTokenVerifier(TokenVerifier):
             user_info = None
 
         if not isinstance(user_info, dict) or not user_info.get("sub"):
-            logger.debug("Auto Ontology rejected an access token")
+            logger.debug("Cubrix Ontology rejected an access token")
             return None
 
         # Space-separated per RFC 6749, and absent when the grant carries none.
@@ -111,10 +112,10 @@ class AutoOntologyTokenVerifier(TokenVerifier):
 
 
 def build_auto_ontology_auth(settings: Settings) -> RemoteAuthProvider:
-    """Advertise Auto Ontology as the authorization server for this MCP server.
+    """Advertise Cubrix Ontology as the authorization server for this MCP server.
 
     Publishing Auto Ontology's URL here is the whole handshake: a client that gets a 401
-    reads this server's protected-resource metadata, finds Auto Ontology, discovers Auto Ontology's
+    reads this server's protected-resource metadata, finds Cubrix Ontology, discovers Cubrix Ontology's
     endpoints, registers itself, and sends the user to Auto Ontology's ordinary login
     page — which already knows how to do SSO.
     """
@@ -124,12 +125,12 @@ def build_auto_ontology_auth(settings: Settings) -> RemoteAuthProvider:
         ),
         authorization_servers=[AnyHttpUrl(settings.api_url)],
         base_url=settings.public_url,
-        resource_name="Auto Ontology",
+        resource_name="Cubrix Ontology",
     )
 
 
 def auto_ontology_access_token() -> str | None:
-    """The token this request was authenticated with, to forward to Auto Ontology.
+    """The token this request was authenticated with, to forward to Cubrix Ontology.
 
     Read back from FastMCP rather than off the incoming header so that what is
     forwarded is the token that actually passed verification.

@@ -1,6 +1,7 @@
 // SPDX-FileCopyrightText: Copyright (c) 2024-2026, NVIDIA CORPORATION & AFFILIATES.
 // All rights reserved.
 // SPDX-License-Identifier: Apache-2.0
+// Modified by Cubrix (ThirtyThree Industries LLC), 2026: Cubrix branding. See NOTICE-CUBRIX.md.
 
 'use client';
 
@@ -765,7 +766,7 @@ export default function ZonesSettingsPage() {
 									value={name}
 									onChange={(e) => setName(e.target.value)}
 									placeholder="Zone Name"
-									className={`w-full rounded-lg border bg-white px-3 py-2 text-sm text-body outline-none transition-colors placeholder:text-secondary dark:bg-zinc-900 dark:text-zinc-300 dark:placeholder:text-zinc-500 ${nameExists ? 'border-red-400 focus:border-red-500 focus:ring-2 focus:ring-red-500/30 dark:border-red-500 dark:focus:border-red-400 dark:focus:ring-red-400/30' : 'border-zinc-300 focus:border-[#76b900] focus:ring-2 focus:ring-[#76b900]/30 dark:border-zinc-600'}`}
+									className={`w-full rounded-lg border bg-white px-3 py-2 text-sm text-body outline-none transition-colors placeholder:text-secondary dark:bg-zinc-900 dark:text-zinc-300 dark:placeholder:text-zinc-500 ${nameExists ? 'border-red-400 focus:border-red-500 focus:ring-2 focus:ring-red-500/30 dark:border-red-500 dark:focus:border-red-400 dark:focus:ring-red-400/30' : 'border-zinc-300 focus:border-(--color-brand) focus:ring-2 focus:ring-(--color-brand)/30 dark:border-zinc-600'}`}
 								/>
 								{nameExists ? (
 									<p className="mt-1 text-xs text-red-500 dark:text-red-400">
@@ -789,7 +790,7 @@ export default function ZonesSettingsPage() {
 								onChange={(e) => setDescription(e.target.value)}
 								placeholder="Optional Description"
 								rows={3}
-								className="w-full resize-y rounded-lg border border-zinc-300 bg-white px-3 py-2 text-sm text-body outline-none transition-colors placeholder:text-secondary focus:border-[#76b900] focus:ring-2 focus:ring-[#76b900]/30 dark:border-zinc-600 dark:bg-zinc-900 dark:text-zinc-300 dark:placeholder:text-zinc-500"
+								className="w-full resize-y rounded-lg border border-zinc-300 bg-white px-3 py-2 text-sm text-body outline-none transition-colors placeholder:text-secondary focus:border-(--color-brand) focus:ring-2 focus:ring-(--color-brand)/30 dark:border-zinc-600 dark:bg-zinc-900 dark:text-zinc-300 dark:placeholder:text-zinc-500"
 							/>
 						</div>
 					</>
